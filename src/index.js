@@ -5,12 +5,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Home from './pages/Home/';
 import CadastroVideo from './pages/cadastro/Video';
 import CadastroCategoria from './pages/cadastro/Categoria';
-
-const Page404 = () => (
-  <div style={{ color: 'var(--primary)' }}>
-    <h1>Página não encontrada</h1>
-  </div>
-)
+import NotFound from './pages/NotFound';
 
 ReactDOM.render(
   <BrowserRouter>
@@ -18,7 +13,7 @@ ReactDOM.render(
       <Route path='/' component={Home} exact />
       <Route path='/cadastro/video' component={CadastroVideo} exact/>
       <Route path='/cadastro/categoria' component={CadastroCategoria} exact/>
-      <Route component={Page404} />
+      <Route component={NotFound} />
     </Switch>
   </BrowserRouter>,
   document.getElementById('root')
