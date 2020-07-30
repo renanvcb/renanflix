@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PageDefault from '../../../components/PageDefault';
 import { Link } from 'react-router-dom';
+import FormField from '../../../components/FormField';
 
 function CadastroCategoria() {
     const initialValues = {
@@ -18,8 +19,12 @@ function CadastroCategoria() {
         setValues(initialValues)
     }
 
+    // function handleChange(e) {
+    //     setValue(e.target.getAttribute('name'), e.target.value)
+    // }
     function handleChange(e) {
-        setValue(e.target.getAttribute('name'), e.target.value)
+        const { name, value } = e.target;
+        setValue(name, value);
     }
 
     //key is a dynamic value... It can be "name", or "description" or "color"
@@ -35,20 +40,25 @@ function CadastroCategoria() {
             <h1>Nova categoria: {values.name}</h1>
 
             <form onSubmit={handleSubmit}>
-                <div>
+                <FormField
+                    label='Nome da Categoria'
+                    type='text'
+                    name='name'
+                    value={values.name}
+                    onChange={handleChange}
+                />
+
+                <FormField
+                    label='Descrição'
+                    type='textarea'
+                    name='description'
+                    value={values.description}
+                    onChange={handleChange}
+                />
+
+                {/* <div>
                     <label>
-                        Nome da categoria:
-                    <input
-                            type='text'
-                            name='name'
-                            value={values.name}
-                            onChange={handleChange}
-                        />
-                    </label>
-                </div>
-                <div>
-                    <label>
-                        Descrição:
+                        Descrição: 
                     <textarea
                             type='text'
                             name='description'
@@ -56,19 +66,14 @@ function CadastroCategoria() {
                             onChange={handleChange}
                         />
                     </label>
-                </div>
-                <div>
-                    <label>
-                        Nome da categoria:
-                    <input
-                            type='color'
-                            name='color'
-                            value={values.color}
-                            onChange={handleChange}
-                        />
-                    </label>
-                </div>
-
+                </div> */}
+                <FormField
+                    label='Cor'
+                    type='color'
+                    name='color'
+                    value={values.color}
+                    onChange={handleChange}
+                />
                 <button>Cadastrar</button>
             </form>
 
