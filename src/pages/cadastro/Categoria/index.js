@@ -6,7 +6,7 @@ import Button from '../../../components/Button';
 
 function CadastroCategoria() {
   const initialValues = {
-    name: '',
+    title: '',
     description: '',
     color: '#000000',
   };
@@ -54,10 +54,10 @@ function CadastroCategoria() {
 
       <form onSubmit={handleSubmit}>
         <FormField
-          label="Nome da Categoria"
+          label="Título da Categoria"
           type="text"
-          name="name"
-          value={values.name}
+          name="title"
+          value={values.title}
           onChange={handleChange}
         />
 
@@ -82,9 +82,9 @@ function CadastroCategoria() {
       <ul>
         {categories.map((category) => (
           <li key={category.id}>
-            {/* {`${category.id} | ${category.name} |
+            {/* {`${category.id} | ${category.title} |
              ${category.description} | ${category.color}`} */}
-            {category.name}
+            {category.title}
           </li>
         ))}
       </ul>
