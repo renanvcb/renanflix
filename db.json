@@ -2,21 +2,95 @@
   "categories": [
     {
       "id": 1,
-      "name": "Front End",
-      "description": "Vídeos relacionados à front end.",
+      "title": "ReactJS",
+      "description": "Vídeos relacionados à ReactJS.",
       "color": "#6bd1ff"
     },
     {
       "id": 2,
-      "name": "Back End",
-      "description": "Vídeos relacionados à back end.",
-      "color": "#00C86F"
+      "title": "NodeJS",
+      "description": "Vídeos relacionados à NodeJS.",
+      "color": "#026e00"
     },
     {
       "id": 3,
-      "name": "Músicas",
+      "title": "React Native",
+      "description": "Vídeos relacionados à React Native.",
+      "color": "#61dafb"
+    },
+    {
+      "id": 4,
+      "title": "Músicas",
       "description": "Músicas que estou ouvindo no momento.",
       "color": "#ff3616"
+    }
+  ],
+  "videos": [
+    {
+      "id": 1,
+      "categoryId": 1,
+      "title": "SEO com React",
+      "url": "https://www.youtube.com/watch?v=c8mVlakBESE"
+    },
+    {
+      "id": 1,
+      "categoryId": 2,
+      "title": "Criando APIs com Node",
+      "url": "https://www.youtube.com/watch?v=wDWdqlYxfcw&list=PLHlHvK2lnJndvvycjBqQAbgEDqXxKLoqn"
+    },
+    {
+      "id": 2,
+      "categoryId": 2,
+      "title": "Node.js: Iniciando da teoria à prática",
+      "url": "https://www.youtube.com/watch?v=DiXbJL3iWVs"
+    },
+    {
+      "id": 1,
+      "categoryId": 3,
+      "title": "Iniciando com React Native",
+      "url": "https://www.youtube.com/watch?v=XcU9GEUZTQA"
+    },
+    {
+      "id": 2,
+      "categoryId": 3,
+      "title": "React Native // Dicionário do Programador",
+      "url": "https://www.youtube.com/watch?v=mqltv3kFdgE"
+    },
+    {
+      "id": 3,
+      "categoryId": 3,
+      "title": "Criando um placar de jogo",
+      "url": "https://www.youtube.com/watch?v=UlUfx05cW_0"
+    },
+    {
+      "id": 4,
+      "categoryId": 3,
+      "title": "Tela de login e animações",
+      "url": "https://www.youtube.com/watch?v=pdFqfOTmd60"
+    },
+    {
+      "id": 1,
+      "categoryId": 4,
+      "title": "Ghost - Mary on a Cross",
+      "url": "https://www.youtube.com/watch?v=k5mX3NkA7jM"
+    },
+    {
+      "id": 2,
+      "categoryId": 4,
+      "title": "Ghost - Kiss The Go-Goat",
+      "url": "https://www.youtube.com/watch?v=Db86lpidcz4"
+    },
+    {
+      "id": 3,
+      "categoryId": 4,
+      "title": "JINJER - Pisces (Live Session)",
+      "url": "https://www.youtube.com/watch?v=SQNtGoM3FVU"
+    },
+    {
+      "id": 4,
+      "categoryId": 4,
+      "title": "JINJER - Teacher, Teacher!",
+      "url": "https://www.youtube.com/watch?v=oRkRwL0vjOg"
     }
   ]
 }
