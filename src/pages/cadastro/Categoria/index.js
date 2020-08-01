@@ -34,7 +34,9 @@ function CadastroCategoria() {
   }
 
   useEffect(() => {
-    const URL = 'http://localhost:3333/categories';
+    const URL = window.location.hostname.includes('localhost')
+      ? 'http://localhost:3333/categories'
+      : 'https://renanborgesflix.herokuapp.com/categories';
     fetch(URL)
       .then(async (serverResponse) => {
         const resposta = await serverResponse.json();
