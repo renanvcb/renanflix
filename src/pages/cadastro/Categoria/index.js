@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
@@ -21,7 +21,7 @@ function CadastroCategoria() {
   }
 
   function setValue(key, value) {
-  // key is a dynamic value... It can be "name", or "description" or "color"
+    // key is a dynamic value... It can be "name", or "description" or "color"
     setValues({
       ...values,
       [key]: value, // eg.: name: 'Movies'
@@ -32,6 +32,17 @@ function CadastroCategoria() {
     const { name, value } = e.target;
     setValue(name, value);
   }
+
+  useEffect(() => {
+    const URL = 'http://localhost:3333/categories';
+    fetch(URL)
+      .then(async (serverResponse) => {
+        const resposta = await serverResponse.json();
+        setCategories([
+          ...resposta,
+        ]);
+      });
+  }, []);
 
   return (
     <PageDefault>
@@ -68,8 +79,9 @@ function CadastroCategoria() {
 
       <ul>
         {categories.map((category) => (
-          <li key={category.name}>
-            {/* {`${category.name} | ${category.description} | ${category.color}`} */}
+          <li key={category.id}>
+            {/* {`${category.id} | ${category.name} |
+             ${category.description} | ${category.color}`} */}
             {category.name}
           </li>
         ))}

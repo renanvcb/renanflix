@@ -1,0 +1,22 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Front End",
+      "description": "Vídeos relacionados à front end.",
+      "color": "#6bd1ff"
+    },
+    {
+      "id": 2,
+      "name": "Back End",
+      "description": "Vídeos relacionados à back end.",
+      "color": "#00C86F"
+    },
+    {
+      "id": 3,
+      "name": "Músicas",
+      "description": "Músicas que estou ouvindo no momento.",
+      "color": "#ff3616"
+    }
+  ]
+}
