@@ -14,12 +14,6 @@ function CadastroCategoria() {
   const [values, setValues] = useState(initialValues);
   const [categories, setCategories] = useState([]);
 
-  function handleSubmit(e) {
-    e.preventDefault();
-    setCategories([...categories, values]); // ... tras todos os valores anteriores
-    setValues(initialValues);
-  }
-
   function setValue(key, value) {
     // key is a dynamic value... It can be "name", or "description" or "color"
     setValues({
@@ -33,15 +27,21 @@ function CadastroCategoria() {
     setValue(name, value);
   }
 
+  function handleSubmit(e) {
+    e.preventDefault();
+    setCategories([...categories, values]); // ... tras todos os valores anteriores
+    setValues(initialValues);
+  }
+
   useEffect(() => {
     const URL = window.location.hostname.includes('localhost')
       ? 'http://localhost:3333/categories'
       : 'https://renanborgesflix.herokuapp.com/categories';
     fetch(URL)
       .then(async (serverResponse) => {
-        const resposta = await serverResponse.json();
+        const response = await serverResponse.json();
         setCategories([
-          ...resposta,
+          ...response,
         ]);
       });
   }, []);
