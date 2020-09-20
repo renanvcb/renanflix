@@ -1,36 +1,42 @@
 {
   "categories": [
     {
-      "id": 1,
       "title": "ReactJS",
-      "description": "Vídeos relacionados à ReactJS.",
-      "color": "#6bd1ff"
+      "description": "Vídeos relacionados à ReactJS",
+      "color": "#6bd1ff",
+      "id": 1
     },
     {
-      "id": 2,
       "title": "NodeJS",
-      "description": "Vídeos relacionados à NodeJS.",
-      "color": "#026e00"
+      "description": "Vídeos relacionados à NodeJS",
+      "color": "#026e00",
+      "id": 2
     },
     {
-      "id": 3,
       "title": "React Native",
-      "description": "Vídeos relacionados à React Native.",
-      "color": "#61dafb"
+      "description": "Vídeos relacionados à React Native",
+      "color": "#61dafb",
+      "id": 3
     },
     {
-      "id": 4,
       "title": "Músicas",
-      "description": "Músicas que estou ouvindo no momento.",
-      "color": "#ff3616"
+      "description": "Músicas que estou ouvindo no momento",
+      "color": "#ff3616",
+      "id": 4
     }
   ],
   "videos": [
     {
       "id": 1,
       "categoryId": 1,
-      "title": "SEO com React",
-      "url": "https://www.youtube.com/watch?v=c8mVlakBESE"
+      "title": "React JS - MELHOR GUIA para Iniciantes! (2020)",
+      "url": "https://www.youtube.com/watch?v=Ws9WVHhNq5M"
+    },
+    {
+      "id": 2,
+      "categoryId": 1,
+      "title": "React JS Curso Rápido ⚛️ Masterclass #1 2002",
+      "url": "https://www.youtube.com/watch?v=XQxitgyZ_S4"
     },
     {
       "id": 1,
@@ -91,6 +97,30 @@
       "categoryId": 4,
       "title": "JINJER - Teacher, Teacher!",
       "url": "https://www.youtube.com/watch?v=oRkRwL0vjOg"
+    },
+    {
+      "categoryId": 1,
+      "title": "Recriando a Interface do Discord com ReactJS | UI Clone",
+      "url": "https://www.youtube.com/watch?v=x4FdZd2-_uU",
+      "id": 6
+    },
+    {
+      "categoryId": 1,
+      "title": "Iniciando no React JS - Tutorial em português",
+      "url": "https://www.youtube.com/watch?v=JMaFQMuaro0",
+      "id": 7
+    },
+    {
+      "categoryId": 2,
+      "title": "O que é Node.js? (Entenda de uma vez por todas)",
+      "url": "https://www.youtube.com/watch?v=nfrVPzDJZQc",
+      "id": 8
+    },
+    {
+      "categoryId": 2,
+      "title": "Sequelize SQlite Node JS Starter Kit - Sequelize CLI",
+      "url": "https://www.youtube.com/watch?v=WXVGLyc4Z4Y",
+      "id": 9
     }
   ]
 }

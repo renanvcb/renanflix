@@ -3,34 +3,23 @@ import { Link } from 'react-router-dom';
 import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
 import Button from '../../../components/Button';
+import useForm from '../../../hooks/useForm';
 
 function CadastroCategoria() {
   const initialValues = {
     title: '',
     description: '',
-    color: '#000000',
+    color: '',
   };
 
-  const [values, setValues] = useState(initialValues);
+  const { handleChange, values, clearForm } = useForm(initialValues);
+
   const [categories, setCategories] = useState([]);
 
-  function setValue(key, value) {
-    // key is a dynamic value... It can be "name", or "description" or "color"
-    setValues({
-      ...values,
-      [key]: value, // eg.: name: 'Movies'
-    });
-  }
-
-  function handleChange(e) {
-    const { name, value } = e.target;
-    setValue(name, value);
-  }
-
-  function handleSubmit(e) {
-    e.preventDefault();
+  function handleSubmit(event) {
+    event.preventDefault();
     setCategories([...categories, values]); // ... tras todos os valores anteriores
-    setValues(initialValues);
+    clearForm();
   }
 
   useEffect(() => {
@@ -48,14 +37,11 @@ function CadastroCategoria() {
 
   return (
     <PageDefault>
-      <h1>
-        Nova categoria:
-      </h1>
+      <h1>Nova categoria:</h1>
 
       <form onSubmit={handleSubmit}>
         <FormField
           label="Título da Categoria"
-          type="text"
           name="title"
           value={values.title}
           onChange={handleChange}
@@ -76,18 +62,48 @@ function CadastroCategoria() {
           value={values.color}
           onChange={handleChange}
         />
-        <Button style={{ background: 'var(--black)' }}>Cadastrar</Button>
+        <Button style={{ background: 'var(--primary)' }}>Cadastrar</Button>
+        <Button type="reset" onClick={clearForm} style={{ background: 'var(--blackLighter)' }}>Limpar</Button>
       </form>
+
+      {console.log(categories)}
 
       <ul>
         {categories.map((category) => (
           <li key={category.id}>
-            {/* {`${category.id} | ${category.title} |
-             ${category.description} | ${category.color}`} */}
             {category.title}
           </li>
         ))}
       </ul>
+
+      {/* <table>
+        <therad>
+          <tr>
+            <th>Nome</th>
+            <th>Descrição</th>
+            <th>Editar</th>
+            <th>Remover</th>
+          </tr>
+        </therad>
+        <tbody>
+          {categories.map((category) => (
+            <tr>
+              <td key={category.id}>
+                {category.title}
+              </td>
+              <td>
+                {category.description}
+              </td>
+              <td>
+                Editar
+              </td>
+              <td>
+                Remover
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table> */}
 
       <Link to="/">
         Voltar para a Home

@@ -22,10 +22,10 @@ export const ExtraLink = styled.a`
   margin-left: 16px;
   text-decoration: none;
   transition: opacity .3s;
-  &:hover,
+  /* &:hover,
   &:focus {
     opacity: .5;
-  }
+  } */
   @media (max-width: 800px) {
     display: block;
     margin-bottom: 16px;
