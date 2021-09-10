@@ -12,7 +12,7 @@ function NotFound() {
     return (
         <PageDefault>
             <Main>
-                <iframe title='Not found' src="https://giphy.com/embed/tvGOBZKNEX0ac" width="480" height="204" frameBorder="0" class="giphy-embed" allowFullScreen />
+                <iframe title='Not found' src="https://c.tenor.com/_BiwWBWhYucAAAAM/what-huh.gif" width="480" height="204" frameBorder="0" class="giphy-embed" allowFullScreen />
                 <h1 style={{ color: 'white' }}>Página não encontrada</h1>
             </Main>
         </PageDefault>
